@@ -1,0 +1,15 @@
+r=linspace(0.001,0.5,1000001);
+y=8.*r.^2+0.004./(r);
+z=16.*r-0.004./(r.^2);
+figure(1);
+plot(r,y);
+xlabel('Radius (m)');
+ylabel('Area (m^2)');
+%axis([0.01 0.15 0 0.5]);
+hold on;
+plot(r,z);
+hold on;
+plot(0.0652,0.0952,'x');
+axis([-0.5 -0.1 -1 1]);
+legend('Area in terms of the Radius A(r)','Derivative of A(r)','Point when the Derivative of A(r) = 0');
+title('Optimizing a Cylindrical Can');
